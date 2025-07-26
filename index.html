@@ -2,17 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YIA Agent Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YIA Login</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="login-screen">
+  <h2 class="center">Please input YIA ID and Passcode</h2>
   <div class="login-box">
-    <h2>Please input YIA ID</h2>
-    <input type="text" id="agentID" placeholder="Agent ID" />
+    <input type="text" id="yia-id" placeholder="YIA ID" />
     <input type="password" id="passcode" placeholder="Passcode" />
     <button onclick="login()">Confirm</button>
   </div>
-  <script src="login.js"></script>
+  <script>
+    function login() {
+      const id = document.getElementById("yia-id").value;
+      const pass = document.getElementById("passcode").value;
+      if (id && pass) {
+        localStorage.setItem("agentName", id);
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Enter both fields");
+      }
+    }
+  </script>
 </body>
 </html>
