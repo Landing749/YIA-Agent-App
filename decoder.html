@@ -1,1 +1,17 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encrypt / Decode</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>YIA Cipher Tool</h1>
+  <textarea id="inputText" placeholder="Enter text here..."></textarea>
+  <input type="number" id="shift" value="4" />
+  <button onclick="encrypt()">Encrypt</button>
+  <button onclick="decrypt()">Decrypt</button>
+  <p>Output:</p>
+  <textarea id="outputText" readonly></textarea>
+  <script src="cipher.js"></script>
+</body>
+</html>
