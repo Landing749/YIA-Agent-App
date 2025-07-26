@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Agent Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>YIA Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 id="welcome-msg">Welcome Agent</h1>
+  <header>
+    <h1 id="greeting">Welcome, Agent</h1>
+  </header>
   <div class="grid">
     <a href="missions.html" class="tile">Missions</a>
     <a href="challenges.html" class="tile">Daily Challenge</a>
-    <a href="decoder.html" class="tile">Decoder/Encryptor</a>
-    <a href="agentlist.html" class="tile">Agent List</a>
-    <a href="texthub.html" class="tile">Universal Messaging</a>
-    <a href="distress.html" class="tile danger">Send Distress</a>
-    <a href="missiontracker.html" class="tile">Mission Tracker</a>
+    <a href="agent-list.html" class="tile">Agent List</a>
+    <a href="cipher.html" class="tile">Cipher Tool</a>
+    <a href="mission-tracker.html" class="tile">Mission Tracker</a>
+    <a href="distress.html" class="tile">Distress</a>
+    <a href="messaging.html" class="tile">Messaging</a>
+    <a href="self-destruct.html" class="tile danger">Self-Destruct</a>
   </div>
+  <script>
+    const name = localStorage.getItem("agentName");
+    document.getElementById("greeting").textContent = "Welcome, " + name;
+  </script>
 </body>
-<script>
-  const name = localStorage.getItem("agentName");
-  document.getElementById("welcome-msg").textContent = Welcome ${name};
-</script>
 </html>
