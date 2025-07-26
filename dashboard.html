@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agent Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 id="welcome-msg">Welcome Agent</h1>
+  <div class="grid">
+    <a href="missions.html" class="tile">Missions</a>
+    <a href="challenges.html" class="tile">Daily Challenge</a>
+    <a href="decoder.html" class="tile">Decoder/Encryptor</a>
+    <a href="agentlist.html" class="tile">Agent List</a>
+    <a href="texthub.html" class="tile">Universal Messaging</a>
+    <a href="distress.html" class="tile danger">Send Distress</a>
+    <a href="missiontracker.html" class="tile">Mission Tracker</a>
+  </div>
+</body>
+<script>
+  const name = localStorage.getItem("agentName");
+  document.getElementById("welcome-msg").textContent = Welcome ${name};
+</script>
+</html>
