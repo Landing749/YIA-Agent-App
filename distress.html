@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Distress Alert</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Distress Signal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Send Distress Alert</h1>
-  <button id="distressBtn" onclick="sendDistress()">🔴 Activate Distress</button>
-  <script src="distress.js"></script>
+  <h2>Send Emergency Signal</h2>
+  <button onclick="sendDistress()">Send Distress Signal</button>
+  <script>
+    function sendDistress() {
+      alert("🚨 Distress signal sent to nearby agents!");
+      if ("vibrate" in navigator) navigator.vibrate([300, 100, 300, 100, 1000]);
+      // TODO: Add Bluetooth/Web backend logic
+    }
+  </script>
 </body>
 </html>
