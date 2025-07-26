@@ -1,1 +1,179 @@
+/* ==== Base Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+/* ==== Global Styles ==== */
+body {
+  background-color: #000000;
+  color: #00ff66;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ==== Login Page ==== */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ff6644;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #00ff99;
+}
+
+.login-container input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: #00ff66;
+}
+
+.login-container button {
+  padding: 10px 20px;
+  background: #00ff66;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-container button:hover {
+  background: #00cc55;
+}
+
+/* ==== Dashboard Layout ==== */
+.dashboard-header {
+  text-align: center;
+  color: #00ff99;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.tile {
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  color: #00ff99;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ff6655;
+  transition: all 0.2s ease-in-out;
+}
+
+.tile:hover {
+  background: #00ff99;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ==== Special Tiles ==== */
+.tile.danger {
+  background: #330000;
+  color: #ff5555;
+  box-shadow: 0 0 10px #ff4444;
+}
+
+.tile.danger:hover {
+  background-color: #ff2222;
+  color: #fff;
+}
+
+/* ==== Utility Forms ==== */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  background: #1a1a1a;
+  color: #00ff66;
+  border: none;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+/* ==== Buttons ==== */
+button {
+  padding: 10px 18px;
+  border: none;
+  background-color: #00ff66;
+  color: black;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px 5px;
+}
+
+button:hover {
+  background-color: #00cc55;
+}
+
+/* ==== Agent List ==== */
+ul.agent-list {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+ul.agent-list li {
+  background: #1a1a1a;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px #00ff6620;
+}
+
+/* ==== Log Output ==== */
+#log {
+  background: #0d0d0d;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* ==== Headings ==== */
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00ff66;
+}
+
+/* ==== Responsive ==== */
+@media screen and (max-width: 600px) {
+  .tile {
+    padding: 20px 10px;
+    font-size: 0.9em;
+  }
+
+  .login-container {
+    margin: 60px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
 
