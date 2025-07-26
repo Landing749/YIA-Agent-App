@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Text Hub</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Agent Messaging</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Universal Messaging System</h1>
-  <textarea id="message" placeholder="Type your message..."></textarea>
-  <button onclick="sendMessage()">Send</button>
-  <div id="log"></div>
-  <script src="messaging.js"></script>
+  <h2>Universal Messaging</h2>
+  <textarea id="msg" placeholder="Enter message..."></textarea>
+  <button onclick="sendMsg()">Send</button>
+  <div id="chat-log"></div>
+  <script>
+    function sendMsg() {
+      const log = document.getElementById("chat-log");
+      const msg = document.getElementById("msg").value;
+      const agent = localStorage.getItem("agentName") || "Unknown";
+      log.innerHTML += <p><b>${agent}:</b> ${msg}</p>;
+      document.getElementById("msg").value = "";
+    }
+  </script>
 </body>
 </html>
