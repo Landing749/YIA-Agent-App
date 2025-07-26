@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self Destruct</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>⚠️ Self-Destruct Protocol</h2>
+  <button onclick="destroy()">Activate Self-Destruct</button>
+  <script>
+    function destroy() {
+      alert("App Data Wiped. Shutting down...");
+      localStorage.clear();
+      // Additional cleanup can go here
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
